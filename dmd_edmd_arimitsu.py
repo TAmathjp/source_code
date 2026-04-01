@@ -45,7 +45,7 @@ Y_train = np.vstack(Y_list)
 # ----------
 # 3. DMD
 # ----------
-
+A_dmd = np.linalg.lstsq(X_train, Y_train, rcond=None)[0]
 def dmd_predict(X):
     return X @ A_dmd
 
